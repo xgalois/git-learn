@@ -66,6 +66,8 @@ git branch -d 分支名
 
 ## 2.6   与远端协同
 
+​		在家里上传代码
+
 ```
 1. 给远程仓库起别名	(仅一次)
 	git remote add origin 远程仓库地址
@@ -73,12 +75,52 @@ git branch -d 分支名
 	git push -u origin 分支名称
 ```
 
+​		到公司新电脑上第一次获取代码
+
 ```
 1. 克隆远程仓库地址
 	git clone 远程仓库地址 (内部已实现git remote add origin 远程仓库地址, 即起别名为origin)
 2. 切换分支
 	git checkout 分支
 ```
+
+​		在公司进行开发
+
+```
+1. 切换到dev分支进行开发
+	git checkout dev
+2. dev代码有点老,先把 master分支合并到dev (仅一次)
+	git merge master
+3. 修改代码
+4. 提交代码, 下班
+	git add .
+	git commit -m "xx"
+	git push origin dev
+```
+
+​		到家里继续写代码
+
+```
+1. 切换到dev分支进行开发
+	git checkout dev
+2. 拉代码
+	git pull origin dev
+3. 继续开发
+4. 提交代码
+	git add .
+	git commit -m "xx"
+	git push origin dev
+```
+
+### 重复如上
+
+```
+开发完毕, 要上线
+```
+
+
+
+
 
 
 

@@ -114,8 +114,17 @@ git branch -d 分支名
 
 ### 重复如上
 
-```
 开发完毕, 要上线
+
+```
+1.将dev分支合并到master,进行上线
+	git checkout master
+	git merge dev
+	git push origin master
+2. 把dev分支有也推送到远端
+	git checkout dev
+	git merge master
+	git push orig
 ```
 
 
